@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử máy – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="maintenance-machine-history">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Lịch sử máy</h1>
+    <p class="page-subtitle">Xem toàn bộ sự cố và nhật ký bảo trì của một máy. AI sẽ phát hiện mẫu lỗi lặp lại.</p>
+
+    <div class="toolbar">
+      <select id="machine-select" class="select">
+        <option value="">-- Chọn máy --</option>
+      </select>
+      <button class="btn btn-primary" id="btn-add-task">+ Ghi nhật ký bảo trì</button>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="card-title">Dòng thời gian sự cố & bảo trì</h3>
+        <div id="history-area"></div>
+      </div>
+
+      <div>
+        <div class="ai-box">
+          <div class="ai-title">🤖 AI-3 – Phát hiện lỗi lặp lại</div>
+          <p class="text-muted" style="font-size:14px;">
+            AI phân tích lịch sử sự cố của máy đang chọn và chỉ ra mẫu lỗi lặp lại kèm đề xuất bảo trì phòng ngừa.
+          </p>
+          <button class="btn btn-primary mt-8" id="btn-ai-insight">✨ Phân tích lỗi lặp</button>
+          <div id="ai-output"></div>
+        </div>
+
+        <div class="card mt-16" id="task-form-card" style="display:none;">
+          <h3 class="card-title" id="task-form-title">Ghi nhật ký bảo trì</h3>
+          <form id="task-form" novalidate>
+            <input type="hidden" id="task-id">
+            <div class="form-group">
+              <label for="task-date">Ngày thực hiện *</label>
+              <input type="date" id="task-date" class="input">
+              <div class="error-msg" id="err-task-date">Vui lòng chọn ngày.</div>
+            </div>
+            <div class="form-group">
+              <label for="task-type">Loại công việc *</label>
+              <select id="task-type" class="select">
+                <option>Sửa chữa</option>
+                <option>Bảo trì định kỳ</option>
+                <option>Vệ sinh</option>
+                <option>Thay thế</option>
+                <option>Kiểm tra</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="task-note">Nội dung *</label>
+              <textarea id="task-note" class="textarea" style="min-height:70px;" placeholder="Đã làm gì trên máy..."></textarea>
+              <div class="error-msg" id="err-task-note">Nội dung tối thiểu 10 ký tự.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">💾 Lưu</button>
+            <button type="button" class="btn btn-outline" id="btn-cancel-task">Hủy</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/ai.js"></script>
+  <script src="../js/pages/maintenance-machine-history.js"></script>
+</body>
+</html>

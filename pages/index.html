@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LineWatch – Theo dõi ca sản xuất và sự cố dây chuyền</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="index">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>LineWatch – Theo dõi ca sản xuất và sự cố dây chuyền</h1>
+      <p>Thông tin sự cố trong xưởng thường nằm ở giấy hoặc chat, gây khó cho trưởng ca và bảo trì
+         khi cần ưu tiên xử lý. LineWatch giúp báo sự cố nhanh, điều phối rõ ràng và tổng hợp downtime
+         tự động, kèm 3 tính năng AI hỗ trợ ra quyết định.</p>
+      <a href="login.html" class="btn" id="hero-btn">Đăng nhập để bắt đầu</a>
+    </div>
+
+    <h2 class="page-title">4 vai trò trong hệ thống</h2>
+    <p class="page-subtitle">Mỗi vai trò có khu vực làm việc riêng sau khi đăng nhập.</p>
+    <div class="grid grid-4">
+      <div class="card role-card">
+        <div class="role-icon">👷</div>
+        <h3>Công nhân vận hành</h3>
+        <p class="text-muted">Báo sự cố và xem trạng thái line.</p>
+      </div>
+      <div class="card role-card">
+        <div class="role-icon">📋</div>
+        <h3>Trưởng ca</h3>
+        <p class="text-muted">Điều phối sự cố và bàn giao ca.</p>
+      </div>
+      <div class="card role-card">
+        <div class="role-icon">🔧</div>
+        <h3>Kỹ thuật bảo trì</h3>
+        <p class="text-muted">Xử lý sự cố và ghi nguyên nhân.</p>
+      </div>
+      <div class="card role-card">
+        <div class="role-icon">🛠️</div>
+        <h3>Quản trị viên</h3>
+        <p class="text-muted">Quản lý máy, dây chuyền và báo cáo.</p>
+      </div>
+    </div>
+
+    <h2 class="page-title mt-16">Số liệu hệ thống</h2>
+    <div class="grid-4 mt-8" id="stats-box">
+      <div class="skeleton"></div>
+    </div>
+
+    <div class="card mt-16">
+      <h3 class="card-title">3 tính năng AI của LineWatch</h3>
+      <ul style="padding-left: 20px;">
+        <li><strong>AI-1 – Phân loại sự cố:</strong> gợi ý loại sự cố + mức ưu tiên khi công nhân báo sự cố.</li>
+        <li><strong>AI-2 – Tóm tắt ca:</strong> tổng hợp sự cố, downtime, việc tồn để trưởng ca bàn giao.</li>
+        <li><strong>AI-3 – Phát hiện lỗi lặp lại:</strong> chỉ ra mẫu lỗi lặp ở từng máy để bảo trì phòng ngừa.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    BTL CSE122 – Nhóm: Đinh Minh Đăng · Tạ Việt Trung · Nguyễn Thành Công
+  </footer>
+
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/index.js"></script>
+</body>
+</html>

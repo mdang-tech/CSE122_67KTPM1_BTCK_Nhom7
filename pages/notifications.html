@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông báo – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="notifications">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 720px;">
+    <h1 class="page-title">Thông báo</h1>
+    <p class="page-subtitle">Cập nhật sự cố và trạng thái xử lý liên quan đến bạn.</p>
+
+    <div class="toolbar">
+      <button class="btn btn-outline btn-sm" id="btn-read-all">Đánh dấu tất cả đã đọc</button>
+      <button class="btn btn-outline btn-sm" id="btn-clear">Xóa tất cả</button>
+    </div>
+
+    <div id="notification-list"></div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/notifications.js"></script>
+</body>
+</html>

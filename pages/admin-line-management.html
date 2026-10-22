@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý dây chuyền – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="admin-line-management">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Quản lý dây chuyền</h1>
+    <p class="page-subtitle">Thêm, sửa, lưu trữ dây chuyền sản xuất và xem số máy thuộc mỗi dây chuyền.</p>
+
+    <div class="toolbar">
+      <button class="btn btn-primary" id="btn-add">+ Thêm dây chuyền</button>
+    </div>
+
+    <div id="line-cards"></div>
+  </main>
+
+  <!-- Modal them / sua day chuyen -->
+  <div class="modal-overlay" id="modal-line">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-line-title">Thêm dây chuyền</h3>
+        <button class="modal-close" onclick="closeModal('modal-line')">✕</button>
+      </div>
+      <form id="line-form" novalidate>
+        <input type="hidden" id="line-id">
+        <div class="form-group">
+          <label for="line-name">Tên dây chuyền *</label>
+          <input type="text" id="line-name" class="input" placeholder="Ví dụ: Dây chuyền D">
+          <div class="error-msg" id="err-name">Tên dây chuyền tối thiểu 3 ký tự.</div>
+        </div>
+        <div class="form-group">
+          <label for="line-product">Sản phẩm *</label>
+          <input type="text" id="line-product" class="input" placeholder="Ví dụ: Nước suối 350ml">
+          <div class="error-msg" id="err-product">Vui lòng nhập sản phẩm của dây chuyền.</div>
+        </div>
+        <div class="form-group">
+          <label for="line-capacity">Công suất (sản phẩm/giờ) *</label>
+          <input type="number" id="line-capacity" class="input" min="1" placeholder="Ví dụ: 8000">
+          <div class="error-msg" id="err-capacity">Công suất phải là số lớn hơn 0.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">💾 Lưu</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/admin-line-management.js"></script>
+</body>
+</html>

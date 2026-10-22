@@ -1,0 +1,19 @@
+Dán link Figma/Canva của nhóm vào đây (thay dòng này):
+
+Link Figma: (đang chờ nhóm tạo - dùng template wireframe trong Canva/Figma, đủ 17 màn hình theo docs/screen-inventory.md)
+Link Canva (phương án dự phòng):
+
+Yêu cầu trong file thiết kế (theo hướng dẫn CSE122 Phần 5):
+1. Sơ đồ trang (sitemap)
+2. Luồng người dùng từng vai trò
+3. Bảng kiểm kê màn hình (chụp từ docs/screen-inventory.md)
+4. Wireframe khung dây
+5. Mockup desktop đủ 17 màn hình
+6. Mockup responsive chính (mobile)
+7. Component guide tối thiểu (nút, badge, card, form, modal)
+8. Trạng thái loading / rỗng / lỗi
+9. Mockup 3 luồng tương tác AI (nhập -> xử lý -> kết quả -> giải thích -> điều khiển)
+
+Sau khi xuất ảnh mockup, lưu vào thư mục design/mockups/ với tên:
+ten-man-hinh-desktop.png
+ten-man-hinh-mobile.png

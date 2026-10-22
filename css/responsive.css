@@ -1,0 +1,67 @@
+/* ===================================================
+   LineWatch - responsive.css
+   Dieu chinh giao dien cho tablet va mobile
+   =================================================== */
+
+/* --- Tablet (man hinh <= 900px) --- */
+@media (max-width: 900px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kanban {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile (man hinh <= 640px) --- */
+@media (max-width: 640px) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #main-nav {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  #main-nav a {
+    white-space: nowrap;
+  }
+
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar .input,
+  .toolbar .select {
+    width: 100%;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .bar-chart {
+    height: 140px;
+    gap: 8px;
+  }
+}

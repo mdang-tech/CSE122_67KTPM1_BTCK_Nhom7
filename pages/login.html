@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="login">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="login-wrap">
+    <div class="login-card">
+      <h2 class="mb-8">Đăng nhập</h2>
+      <p class="text-muted mb-16" style="font-size:14px;">Chọn vai trò để đăng nhập (mật khẩu chung: <strong>123456</strong>)</p>
+
+      <form id="login-form" novalidate>
+        <div class="form-group" id="role-list">
+          <label>Chọn vai trò</label>
+          <label class="role-option">
+            <input type="radio" name="username" value="operator1">
+            <span>👷 Công nhân vận hành – Đinh Minh Đăng</span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="username" value="supervisor1">
+            <span>📋 Trưởng ca – Tạ Việt Trung</span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="username" value="maintenance1">
+            <span>🔧 Kỹ thuật bảo trì – Nguyễn Thành Công</span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="username" value="admin1">
+            <span>🛠️ Quản trị viên</span>
+          </label>
+          <div class="error-msg" id="err-role">Vui lòng chọn một vai trò.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" class="input" placeholder="Nhập mật khẩu">
+          <div class="error-msg" id="err-password">Mật khẩu không đúng hoặc còn trống.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-login" style="width:100%;">Đăng nhập</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/login.js"></script>
+</body>
+</html>

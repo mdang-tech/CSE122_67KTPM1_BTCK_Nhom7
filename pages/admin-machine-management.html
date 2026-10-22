@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý máy – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="admin-machine-management">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Quản lý máy</h1>
+    <p class="page-subtitle">Thêm, sửa, lưu trữ máy móc trong các dây chuyền.</p>
+
+    <div class="toolbar">
+      <input type="text" id="search-box" class="input" placeholder="🔍 Tìm theo tên máy hoặc mã...">
+      <select id="filter-line" class="select">
+        <option value="all">Tất cả dây chuyền</option>
+      </select>
+      <select id="filter-status" class="select">
+        <option value="all">Mọi trạng thái</option>
+        <option value="running">Đang chạy</option>
+        <option value="warning">Cảnh báo</option>
+        <option value="stopped">Dừng</option>
+        <option value="archived">Đã lưu trữ</option>
+      </select>
+      <button class="btn btn-primary" id="btn-add">+ Thêm máy</button>
+    </div>
+
+    <div class="card">
+      <div class="table-wrap" id="machine-table-box"></div>
+    </div>
+  </main>
+
+  <!-- Modal them / sua may -->
+  <div class="modal-overlay" id="modal-machine">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-machine-title">Thêm máy</h3>
+        <button class="modal-close" onclick="closeModal('modal-machine')">✕</button>
+      </div>
+      <form id="machine-form" novalidate>
+        <input type="hidden" id="machine-id">
+        <div class="form-group">
+          <label for="machine-name">Tên máy *</label>
+          <input type="text" id="machine-name" class="input" placeholder="Ví dụ: Máy chiết rót A1">
+          <div class="error-msg" id="err-name">Tên máy tối thiểu 3 ký tự.</div>
+        </div>
+        <div class="form-group">
+          <label for="machine-code">Mã máy *</label>
+          <input type="text" id="machine-code" class="input" placeholder="Ví dụ: M-A1">
+          <div class="error-msg" id="err-code">Mã máy không được để trống và không được trùng.</div>
+        </div>
+        <div class="form-group">
+          <label for="machine-line">Thuộc dây chuyền *</label>
+          <select id="machine-line" class="select"></select>
+        </div>
+        <div class="form-group">
+          <label for="machine-status">Trạng thái</label>
+          <select id="machine-status" class="select">
+            <option value="running">Đang chạy</option>
+            <option value="warning">Cảnh báo</option>
+            <option value="stopped">Dừng</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">💾 Lưu</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/admin-machine-management.js"></script>
+</body>
+</html>

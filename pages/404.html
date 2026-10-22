@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 – Không tìm thấy trang</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="404">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card empty-state" style="padding: 80px 16px;">
+      <span class="empty-icon">🚧</span>
+      <h1 style="font-size: 48px; color: var(--primary);">404</h1>
+      <p>Không tìm thấy trang bạn yêu cầu.</p>
+      <a href="index.html" class="btn btn-primary mt-16">Về trang chủ</a>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script>initPage();</script>
+</body>
+</html>

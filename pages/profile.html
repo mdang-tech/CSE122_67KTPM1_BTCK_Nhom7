@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ sơ cá nhân – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="profile">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 640px;">
+    <h1 class="page-title">Hồ sơ cá nhân</h1>
+    <p class="page-subtitle">Xem và cập nhật thông tin tài khoản của bạn.</p>
+
+    <div class="card">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
+        <span class="avatar" id="profile-avatar" style="width:56px;height:56px;font-size:24px;"></span>
+        <div>
+          <strong id="profile-name"></strong><br>
+          <span class="badge badge-info" id="profile-role"></span>
+        </div>
+      </div>
+
+      <form id="profile-form" novalidate>
+        <div class="form-group">
+          <label for="input-name">Họ và tên</label>
+          <input type="text" id="input-name" class="input">
+          <div class="error-msg" id="err-name">Tên không được để trống và tối thiểu 2 ký tự.</div>
+        </div>
+        <div class="form-group">
+          <label for="input-username">Tên đăng nhập</label>
+          <input type="text" id="input-username" class="input" disabled>
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Dữ liệu demo</h3>
+      <p class="text-muted mb-8" style="font-size:14px;">
+        Đưa toàn bộ dữ liệu (dây chuyền, máy, sự cố, ghi chú...) về trạng thái ban đầu.
+      </p>
+      <button class="btn btn-danger" id="btn-reset">Đặt lại dữ liệu demo</button>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/profile.js"></script>
+</body>
+</html>

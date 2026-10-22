@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng sự cố – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="supervisor-incident-board">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Bảng sự cố</h1>
+    <p class="page-subtitle">Điều phối sự cố: chuyển trạng thái và phân công bảo trì bằng các nút trên mỗi thẻ.</p>
+
+    <div class="toolbar">
+      <select id="filter-priority" class="select">
+        <option value="all">Mọi mức ưu tiên</option>
+        <option value="Cao">Cao</option>
+        <option value="Trung bình">Trung bình</option>
+        <option value="Thấp">Thấp</option>
+      </select>
+      <select id="filter-line" class="select">
+        <option value="all">Tất cả dây chuyền</option>
+      </select>
+    </div>
+
+    <div class="kanban" id="kanban-board"></div>
+  </main>
+
+  <!-- Modal phan cong -->
+  <div class="modal-overlay" id="modal-assign">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Phân công xử lý</h3>
+        <button class="modal-close" onclick="closeModal('modal-assign')">✕</button>
+      </div>
+      <form id="assign-form">
+        <input type="hidden" id="assign-id">
+        <p class="mb-8" id="assign-title"></p>
+        <div class="form-group">
+          <label for="assign-user">Người xử lý</label>
+          <select id="assign-user" class="select"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Phân công</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/supervisor-incident-board.js"></script>
+</body>
+</html>

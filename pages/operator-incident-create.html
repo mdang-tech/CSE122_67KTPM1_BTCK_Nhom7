@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo sự cố – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="operator-incident-create">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Báo sự cố</h1>
+    <p class="page-subtitle">Điền biểu mẫu chuẩn để trưởng ca và bảo trì có đủ bối cảnh xử lý. AI sẽ gợi ý loại sự cố và mức ưu tiên.</p>
+
+    <div class="grid-2">
+      <!-- Cot trai: bieu mẫu bao su co -->
+      <div class="card">
+        <h3 class="card-title">Thông tin sự cố</h3>
+        <form id="incident-form" novalidate>
+          <div class="form-group">
+            <label for="input-machine">Máy gặp sự cố *</label>
+            <select id="input-machine" class="select">
+              <option value="">-- Chọn máy --</option>
+            </select>
+            <div class="error-msg" id="err-machine">Vui lòng chọn máy gặp sự cố.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-title">Tiêu đề sự cố *</label>
+            <input type="text" id="input-title" class="input" placeholder="Ví dụ: Băng tải A3 bị kẹt" maxlength="80">
+            <div class="error-msg" id="err-title">Tiêu đề không được để trống (tối thiểu 5 ký tự).</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-desc">Mô tả chi tiết *</label>
+            <textarea id="input-desc" class="textarea" placeholder="Mô tả hiện tượng: tiếng kêu, khói, dừng máy, thời điểm xảy ra..."></textarea>
+            <div class="error-msg" id="err-desc">Mô tả tối thiểu 15 ký tự để đủ thông tin xử lý.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-category">Loại sự cố *</label>
+            <select id="input-category" class="select"></select>
+          </div>
+
+          <div class="form-group">
+            <label for="input-priority">Mức ưu tiên *</label>
+            <select id="input-priority" class="select"></select>
+          </div>
+
+          <button type="submit" class="btn btn-danger" id="btn-submit">🚨 Gửi báo cáo sự cố</button>
+          <a href="operator-shift-incidents.html" class="btn btn-outline">Hủy bỏ</a>
+        </form>
+      </div>
+
+      <!-- Cot phai: khoi AI-1 -->
+      <div>
+        <div class="ai-box">
+          <div class="ai-title">🤖 AI-1 – Phân loại sự cố</div>
+          <p class="text-muted" style="font-size:14px;">
+            Nhập tiêu đề và mô tả trước, sau đó bấm nút để AI gợi ý <strong>loại sự cố</strong>
+            và <strong>mức ưu tiên</strong>. Bạn luôn có quyền sửa lại gợi ý.
+          </p>
+          <button class="btn btn-primary mt-8" id="btn-ai">✨ Cho AI phân loại</button>
+          <div id="ai-output"></div>
+        </div>
+
+        <div class="card mt-16">
+          <h3 class="card-title">Hướng dẫn nhanh</h3>
+          <ul class="text-muted" style="font-size:14px; padding-left:20px;">
+            <li>Mô tả càng chi tiết, AI phân loại càng chính xác.</li>
+            <li>Sự cố mức <strong>Cao</strong>: máy dừng hoàn toàn, nguy cơ mất an toàn.</li>
+            <li>Sự cố mức <strong>Trung bình</strong>: máy chạy được nhưng bất thường.</li>
+            <li>Sự cố mức <strong>Thấp</strong>: vấn đề nhỏ, chưa ảnh hưởng sản xuất.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/ai.js"></script>
+  <script src="../js/pages/operator-incident-create.js"></script>
+</body>
+</html>

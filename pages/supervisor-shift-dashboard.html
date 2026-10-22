@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng điều khiển ca – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="supervisor-shift-dashboard">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Bảng điều khiển ca</h1>
+    <p class="page-subtitle">Tổng quan ca sản xuất hôm nay: sự cố, downtime và tóm tắt của AI để bàn giao.</p>
+
+    <div class="grid-4 mb-16" id="stats-box">
+      <div class="skeleton"></div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Cot trai: danh sach su co dang mo -->
+      <div class="card">
+        <h3 class="card-title">Sự cố đang mở</h3>
+        <div id="open-incidents"></div>
+      </div>
+
+      <!-- Cot phai: AI-2 tom tat ca -->
+      <div>
+        <div class="ai-box">
+          <div class="ai-title">🤖 AI-2 – Tóm tắt ca</div>
+          <p class="text-muted" style="font-size:14px;">
+            AI tổng hợp sự cố, downtime và việc tồn trong ca thành đoạn tóm tắt phục vụ bàn giao.
+          </p>
+          <button class="btn btn-primary mt-8" id="btn-ai-summary">✨ Tạo tóm tắt ca</button>
+          <div id="ai-output"></div>
+        </div>
+
+        <div class="card mt-16">
+          <h3 class="card-title">Máy đang dừng / cảnh báo</h3>
+          <div id="problem-machines"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/ai.js"></script>
+  <script src="../js/pages/supervisor-shift-dashboard.js"></script>
+</body>
+</html>

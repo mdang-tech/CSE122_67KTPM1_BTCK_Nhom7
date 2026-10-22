@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hàng chờ bảo trì – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="maintenance-queue">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Hàng chờ bảo trì</h1>
+    <p class="page-subtitle">Danh sách sự cố cần xử lý, sắp xếp theo mức ưu tiên. Bấm "Nhận việc" để bắt đầu.</p>
+
+    <div class="tabs" id="queue-tabs">
+      <button class="active" data-tab="mine">Việc của tôi</button>
+      <button data-tab="unassigned">Chưa phân công</button>
+      <button data-tab="done">Đã hoàn thành</button>
+    </div>
+
+    <div id="queue-list"></div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/maintenance-queue.js"></script>
+</body>
+</html>

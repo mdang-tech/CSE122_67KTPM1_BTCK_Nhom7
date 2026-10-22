@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bàn giao ca – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="supervisor-handover-note">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Bàn giao ca</h1>
+    <p class="page-subtitle">Viết ghi chú bàn giao cho ca sau: tình hình chung, việc tồn đọng cần theo dõi.</p>
+
+    <div class="grid-2">
+      <!-- Cot trai: form tao ghi chu -->
+      <div class="card">
+        <h3 class="card-title">Tạo ghi chú bàn giao</h3>
+        <form id="note-form" novalidate>
+          <div class="form-group">
+            <label for="input-shift">Ca *</label>
+            <select id="input-shift" class="select">
+              <option value="">-- Chọn ca --</option>
+              <option>Ca sáng</option>
+              <option>Ca chiều</option>
+              <option>Ca đêm</option>
+            </select>
+            <div class="error-msg" id="err-shift">Vui lòng chọn ca.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-date">Ngày làm việc *</label>
+            <input type="date" id="input-date" class="input">
+            <div class="error-msg" id="err-date">Vui lòng chọn ngày.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-content">Nội dung bàn giao *</label>
+            <textarea id="input-content" class="textarea" placeholder="Tình hình sản xuất, sự cố đã xử lý, vấn đề còn tồn..."></textarea>
+            <div class="error-msg" id="err-content">Nội dung tối thiểu 20 ký tự.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-pending">Việc tồn đọng cho ca sau</label>
+            <textarea id="input-pending" class="textarea" style="min-height:60px;" placeholder="Việc ca sau cần theo dõi hoặc làm tiếp..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">💾 Lưu ghi chú</button>
+        </form>
+      </div>
+
+      <!-- Cot phai: danh sach ghi chu -->
+      <div>
+        <div class="card">
+          <h3 class="card-title">Lịch sử bàn giao</h3>
+          <div id="note-list"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal sua ghi chu -->
+  <div class="modal-overlay" id="modal-edit">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Sửa ghi chú bàn giao</h3>
+        <button class="modal-close" onclick="closeModal('modal-edit')">✕</button>
+      </div>
+      <form id="edit-form">
+        <input type="hidden" id="edit-id">
+        <div class="form-group">
+          <label for="edit-shift">Ca</label>
+          <select id="edit-shift" class="select">
+            <option>Ca sáng</option>
+            <option>Ca chiều</option>
+            <option>Ca đêm</option>
+            <option>Ca hiện tại</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-date">Ngày</label>
+          <input type="date" id="edit-date" class="input">
+        </div>
+        <div class="form-group">
+          <label for="edit-content">Nội dung</label>
+          <textarea id="edit-content" class="textarea"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="edit-pending">Việc tồn đọng</label>
+          <textarea id="edit-pending" class="textarea" style="min-height:60px;"></textarea>
+        </div>
+        <div class="error-msg" id="err-edit">Nội dung tối thiểu 20 ký tự.</div>
+        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/supervisor-handover-note.js"></script>
+</body>
+</html>

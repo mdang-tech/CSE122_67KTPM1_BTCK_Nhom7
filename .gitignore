@@ -1,0 +1,11 @@
+# File he thong
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Node (neu sau nay co dung thu cong cu)
+node_modules/

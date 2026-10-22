@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sự cố – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="maintenance-incident-detail">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Chi tiết sự cố</h1>
+    <p class="page-subtitle">Xem bối cảnh máy, cập nhật trạng thái và ghi nguyên nhân / biện pháp xử lý.</p>
+
+    <div class="toolbar">
+      <select id="incident-select" class="select">
+        <option value="">-- Chọn sự cố cần xử lý --</option>
+      </select>
+    </div>
+
+    <div id="detail-area"></div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/maintenance-incident-detail.js"></script>
+</body>
+</html>

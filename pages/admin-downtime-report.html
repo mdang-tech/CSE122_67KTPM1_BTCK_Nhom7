@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo cáo downtime – LineWatch</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="admin-downtime-report">
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html">⚙ LineWatch</a>
+      <nav id="main-nav"></nav>
+      <div class="topbar-user" id="topbar-user"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Báo cáo downtime</h1>
+    <p class="page-subtitle">Tổng hợp thời gian dừng máy theo khoảng thời gian, giúp quản lý thấy điểm nóng của nhà xưởng.</p>
+
+    <div class="toolbar">
+      <label style="font-size:14px;">Từ ngày
+        <input type="date" id="date-from" class="input">
+      </label>
+      <label style="font-size:14px;">Đến ngày
+        <input type="date" id="date-to" class="input">
+      </label>
+      <button class="btn btn-primary" id="btn-report">📊 Tạo báo cáo</button>
+      <button class="btn btn-outline" id="btn-export">⬇ Xuất CSV</button>
+    </div>
+
+    <div class="grid-4 mb-16" id="report-stats"></div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="card-title">Downtime theo dây chuyền (phút)</h3>
+        <div id="chart-area"></div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Máy có downtime nhiều nhất</h3>
+        <div class="table-wrap" id="top-machines"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Chi tiết sự cố trong khoảng thời gian</h3>
+      <div class="table-wrap" id="detail-table"></div>
+    </div>
+  </main>
+
+  <footer class="footer">LineWatch – BTL CSE122</footer>
+  <div id="toast-box"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/admin-downtime-report.js"></script>
+</body>
+</html>
