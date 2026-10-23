@@ -1,10 +1,9 @@
-/* ===================================================
+/* 
    LineWatch - data.js
    Du lieu gia lap (mock data) + ham luu/doc LocalStorage
    Moi trang deu phai nap file nay TRUOC main.js
-   =================================================== */
+   */
 
-/* ---------- Du lieu mau ban dau ---------- */
 
 var SEED_USERS = [
   { id: 1, username: "operator1", password: "123456", name: "Đinh Minh Đăng", role: "operator", roleLabel: "Công nhân vận hành" },
@@ -129,7 +128,7 @@ var SEED_NOTIFICATIONS = [
   { id: 3, userId: 1, message: "Sự cố 'Lò thanh trùng C1 quá nhiệt' chuyển sang Đang chờ", time: "2026-10-21T15:00:00", read: true }
 ];
 
-/* ---------- DB: ham doc/ghi LocalStorage ---------- */
+
 
 var DB = {
   /* Doc 1 collection tu LocalStorage, tra ve mang */
@@ -215,7 +214,7 @@ function resetData() {
   seedDataIfEmpty();
 }
 
-/* ---------- Cac gia tri co dinh dung chung ---------- */
+/*  Cac gia tri co dinh dung chung  */
 
 var INCIDENT_STATUSES = ["Mới", "Đang chờ", "Đang xử lý", "Đã xử lý", "Đã hủy"];
 var PRIORITIES = ["Cao", "Trung bình", "Thấp"];
