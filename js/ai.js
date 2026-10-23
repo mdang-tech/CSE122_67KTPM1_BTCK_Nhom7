@@ -1,4 +1,4 @@
-/* ===================================================
+/*
    LineWatch - ai.js
    Mo phong 3 tinh nang AI bang JavaScript theo luat
    (khong goi API that). Moi ham nhan du lieu vao,
@@ -10,9 +10,9 @@
    hoac khi AI that bai / khong chac chan:
    { ok: false, message: "..." }
    =================================================== */
-
-/* ---------- AI-1: Phan loai su co va muc uu tien ---------- */
+AI-1: Phan loai su co va muc uu tien 
 /* Dung trong trang operator-incident-create.html */
+
 
 var AI_KEYWORDS = [
   { words: ["kẹt", "dừng đột ngột", "dồn ứ", "mắc"], category: "Kẹt vật liệu", priority: "Cao" },
@@ -67,7 +67,6 @@ function aiClassifyIncident(title, description, callback) {
   }, 1200);
 }
 
-/* ---------- AI-2: Tom tat ca san xuat ---------- */
 /* Dung trong trang supervisor-shift-dashboard.html */
 
 function aiSummarizeShift(callback) {
@@ -128,7 +127,6 @@ function aiSummarizeShift(callback) {
   }, 1500);
 }
 
-/* ---------- AI-3: Phat hien mau loi lap lai ---------- */
 /* Dung trong trang maintenance-machine-history.html */
 
 function aiFindRepeatFailures(machineId, callback) {
@@ -201,7 +199,6 @@ function aiFindRepeatFailures(machineId, callback) {
   }, 1400);
 }
 
-/* ---------- Ham dung chung cho khoi AI tren cac trang ---------- */
 
 /* Hien trang thai "AI dang xu ly..." */
 function aiShowLoading(containerId) {
@@ -210,7 +207,6 @@ function aiShowLoading(containerId) {
     '<div class="ai-loading"><span class="spinner"></span> AI đang phân tích dữ liệu, vui lòng chờ...</div>';
 }
 
-/* Hien ket qua AI kem giai thich + cac nut dieu khien */
 /* actions: mang cac nut, moi nut { label, className, onClick (ten ham dang chuoi) } */
 function aiShowResult(containerId, answer, actionsHtml) {
   var box = document.getElementById(containerId);
