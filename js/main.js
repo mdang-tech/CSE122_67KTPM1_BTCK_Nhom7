@@ -1,8 +1,8 @@
-/* ===================================================
+/* 
    LineWatch - main.js
    Ham dung chung: dang nhap, nav, toast, modal,
    dinh dang ngay, escapeHtml...
-   =================================================== */
+    */
 
 /* Goi khi trang bat dau: seed du lieu + ve nav + ve user */
 function initPage() {
@@ -11,7 +11,7 @@ function initPage() {
   renderTopbarUser();
 }
 
-/* ---------- Dang nhap / phan quyen ---------- */
+/*  Dang nhap / phan quyen */
 
 function getCurrentUser() {
   var raw = localStorage.getItem("lw_user");
@@ -61,7 +61,7 @@ function homePageOfRole(role) {
   return "index.html";
 }
 
-/* ---------- Ve thanh nav theo vai tro ---------- */
+/* Ve thanh nav theo vai tro */
 
 var NAV_LINKS = {
   operator: [
@@ -127,7 +127,7 @@ function renderTopbarUser() {
     '<button class="btn btn-outline btn-sm" onclick="logout()">Đăng xuất</button>';
 }
 
-/* ---------- Toast (thong bao noi) ---------- */
+/* Toast (thong bao noi) */
 
 function showToast(message, type) {
   var box = document.getElementById("toast-box");
@@ -145,7 +145,7 @@ function showToast(message, type) {
   }, 3000);
 }
 
-/* ---------- Modal (cua so bat) ---------- */
+/* Modal (cua so bat) */
 
 function openModal(modalId) {
   var modal = document.getElementById(modalId);
@@ -157,7 +157,7 @@ function closeModal(modalId) {
   if (modal !== null) { modal.classList.remove("open"); }
 }
 
-/* ---------- Ham tien ich khac ---------- */
+/* Ham tien ich khac */
 
 /* Chong loi XSS khi noi chuoi HTML */
 function escapeHtml(str) {
@@ -169,7 +169,6 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
-/* "2026-10-22T07:15:00" -> "07:15 22/10/2026" */
 function formatDateTime(iso) {
   if (!iso) { return ""; }
   var d = new Date(iso);
@@ -179,7 +178,6 @@ function formatDateTime(iso) {
   );
 }
 
-/* "2026-10-22T07:15:00" -> "22/10/2026" */
 function formatDate(iso) {
   if (!iso) { return ""; }
   var d = new Date(iso);
@@ -254,7 +252,7 @@ function addNotification(userId, message) {
   });
 }
 
-/* ---------- Mo phong trang thai "dang tai" ---------- */
+/* Mo phong trang thai "dang tai" */
 
 /* Hien skeleton trong khoang thoi gian ngan de demo trang thai loading */
 function fakeLoading(containerId, renderCallback) {
