@@ -1,9 +1,9 @@
-/* ===================================================
+/* 
    LineWatch - style.css
    File CSS chung cho toan bo du an
-   =================================================== */
+   */
 
-/* --- Bien mau sac (design tokens) --- */
+/* Bien mau sac (design tokens) */
 :root {
   --primary: #2563eb;
   --primary-dark: #1e40af;
@@ -18,7 +18,7 @@
   --info: #0ea5e9;
 }
 
-/* --- Reset co ban --- */
+/* Reset co ban */
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Thanh topbar --- */
+/* Thanh topbar */
 .topbar {
   background: var(--card);
   border-bottom: 1px solid var(--border);
@@ -117,7 +117,7 @@ a:hover {
   font-size: 14px;
 }
 
-/* --- Khoi noi dung chinh --- */
+/* Khoi noi dung chinh */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -144,7 +144,7 @@ a:hover {
   margin-top: 32px;
 }
 
-/* --- Card --- */
+/* Card */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -177,7 +177,7 @@ a:hover {
   gap: 16px;
 }
 
-/* --- Nut (button) --- */
+/* Nut (button) */
 .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -225,7 +225,7 @@ a:hover {
   font-size: 13px;
 }
 
-/* --- Nhan (badge) --- */
+/* Nhan (badge) */
 .badge {
   display: inline-block;
   padding: 2px 10px;
@@ -259,7 +259,7 @@ a:hover {
   color: #475569;
 }
 
-/* --- Form --- */
+/* Form */
 .form-group {
   margin-bottom: 14px;
 }
@@ -310,7 +310,7 @@ a:hover {
   display: block;
 }
 
-/* --- Bang (table) --- */
+/* Bang (table) */
 .table-wrap {
   overflow-x: auto;
 }
@@ -337,7 +337,7 @@ a:hover {
   background: #f8fafc;
 }
 
-/* --- Thanh cong cu (search + filter) --- */
+/* Thanh cong cu (search + filter) */
 .toolbar {
   display: flex;
   gap: 8px;
@@ -353,7 +353,7 @@ a:hover {
   min-width: 150px;
 }
 
-/* --- So lieu thong ke (stat) --- */
+/* So lieu thong ke (stat) */
 .stat {
   background: var(--card);
   border: 1px solid var(--border);
@@ -376,7 +376,7 @@ a:hover {
 .stat-warn .stat-value { color: var(--warn); }
 .stat-info .stat-value { color: var(--info); }
 
-/* --- Trang thai: rong / tai / loi --- */
+/* Trang thai: rong / tai / loi */
 .empty-state {
   text-align: center;
   padding: 40px 16px;
@@ -424,7 +424,7 @@ a:hover {
   to { transform: rotate(360deg); }
 }
 
-/* --- Modal (cua so bat) --- */
+/* Modal (cua so bat) */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -495,7 +495,7 @@ a:hover {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* --- Khoi AI --- */
+/* Khoi AI */
 .ai-box {
   border: 2px dashed var(--primary);
   border-radius: 10px;
@@ -549,7 +549,7 @@ a:hover {
   padding: 12px 0;
 }
 
-/* --- Bang kanban (incident board) --- */
+/* Bang kanban (incident board) */
 .kanban {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -579,7 +579,7 @@ a:hover {
   font-size: 13px;
 }
 
-/* --- Dong thoi gian (timeline) --- */
+/* Dong thoi gian (timeline) */
 .timeline {
   list-style: none;
 }
@@ -610,7 +610,7 @@ a:hover {
   color: var(--muted);
 }
 
-/* --- Bieu do cot don gian (CSS) --- */
+/* Bieu do cot don gian (CSS) */
 .bar-chart {
   display: flex;
   align-items: flex-end;
@@ -642,7 +642,7 @@ a:hover {
   color: var(--muted);
 }
 
-/* --- Tab --- */
+/* Tab */
 .tabs {
   display: flex;
   gap: 4px;
@@ -668,7 +668,7 @@ a:hover {
   font-weight: 600;
 }
 
-/* --- Trang login --- */
+/* Trang login */
 .login-wrap {
   min-height: 80vh;
   display: flex;
@@ -706,7 +706,7 @@ a:hover {
   font-weight: 600;
 }
 
-/* --- Trang thai may (line status) --- */
+/* Trang thai may (line status) */
 .machine-card {
   display: flex;
   justify-content: space-between;
@@ -725,7 +725,7 @@ a:hover {
 .dot-warning { background: var(--warn); }
 .dot-stopped { background: var(--danger); }
 
-/* --- Hero trang chu --- */
+/* Hero trang chu */
 .hero {
   text-align: center;
   padding: 56px 16px;
