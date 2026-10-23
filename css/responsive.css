@@ -1,9 +1,9 @@
-/* ===================================================
+/*
    LineWatch - responsive.css
    Dieu chinh giao dien cho tablet va mobile
-   =================================================== */
+   */
 
-/* --- Tablet (man hinh <= 900px) --- */
+/* Tablet (man hinh <= 900px) */
 @media (max-width: 900px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -14,7 +14,7 @@
   }
 }
 
-/* --- Mobile (man hinh <= 640px) --- */
+/*  Mobile (man hinh <= 640px) */
 @media (max-width: 640px) {
   .topbar-inner {
     flex-direction: column;
