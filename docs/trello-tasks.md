@@ -121,14 +121,14 @@ Trạng thái: CẦN LÀM
 ```
 
 ```
-TASK-11 – Báo sự cố operator-incident-create.html (AI-1)
+TASK-14 – Thông báo notifications.html
 Người làm: Đăng
-Màn hình: operator-incident-create.html
-Mô tả: Form máy (optgroup theo line)/tiêu đề/mô tả/loại/ưu tiên + validation; khối AI-1: loading → kết quả (loại, ưu tiên, độ tin cậy) → giải thích → Chấp nhận (điền vào form) / Sửa / Tạo lại / Từ chối; trạng thái AI thất bại khi mô tả < 15 ký tự; lưu incident + thông báo cho trưởng ca + máy ưu tiên Cao chuyển stopped.
+Màn hình: notifications.html
+Mô tả: Danh sách thông báo của user hiện tại (mới nhất trước), badge "Mới", nút đánh dấu đã đọc từng cái / tất cả, xóa tất cả (confirm), trạng thái rỗng.
 Hạn: ____
-Nhánh: feature/operator-incident-create
+Nhánh: feature/common-notifications
 Reviewer: Trung
-OBS: SV1-06-operator-incident-create.mp4
+OBS: SV1-07-notifications.mp4
 Trạng thái: CẦN LÀM
 ```
 
@@ -140,7 +140,7 @@ Mô tả: Bảng sự cố của chính mình; search realtime + lọc trạng t
 Hạn: ____
 Nhánh: feature/operator-shift-incidents
 Reviewer: Công
-OBS: SV1-07-operator-shift-incidents.mp4
+OBS: SV1-06-operator-shift-incidents.mp4
 Trạng thái: CẦN LÀM
 ```
 
@@ -159,14 +159,14 @@ Trạng thái: CẦN LÀM
 ```
 
 ```
-TASK-14 – Thông báo notifications.html
+TASK-11 – Báo sự cố operator-incident-create.html (AI-1)
 Người làm: Trung
-Màn hình: notifications.html
-Mô tả: Danh sách thông báo của user hiện tại (mới nhất trước), badge "Mới", nút đánh dấu đã đọc từng cái / tất cả, xóa tất cả (confirm), trạng thái rỗng.
+Màn hình: operator-incident-create.html
+Mô tả: Form máy (optgroup theo line)/tiêu đề/mô tả/loại/ưu tiên + validation; khối AI-1: loading → kết quả (loại, ưu tiên, độ tin cậy) → giải thích → Chấp nhận (điền vào form) / Sửa / Tạo lại / Từ chối; trạng thái AI thất bại khi mô tả < 15 ký tự; lưu incident + thông báo cho trưởng ca + máy ưu tiên Cao chuyển stopped.
 Hạn: ____
-Nhánh: feature/common-notifications
-Reviewer: Đăng
-OBS: SV2-01-notifications.mp4
+Nhánh: feature/operator-incident-create
+Reviewer: Công
+OBS: SV2-04-operator-incident-create.mp4
 Trạng thái: CẦN LÀM
 ```
 
@@ -178,7 +178,7 @@ Mô tả: 4 số liệu thống kê (skeleton loading), danh sách sự cố m�
 Hạn: ____
 Nhánh: feature/supervisor-shift-dashboard
 Reviewer: Công
-OBS: SV2-02-supervisor-shift-dashboard.mp4
+OBS: SV2-01-supervisor-shift-dashboard.mp4
 Trạng thái: CẦN LÀM
 ```
 
@@ -190,7 +190,7 @@ Mô tả: Kanban 4 cột (Mới/Đang chờ/Đang xử lý/Đã xử lý); mỗi
 Hạn: ____
 Nhánh: feature/supervisor-incident-board
 Reviewer: Đăng
-OBS: SV2-03-supervisor-incident-board.mp4
+OBS: SV2-02-supervisor-incident-board.mp4
 Trạng thái: CẦN LÀM
 ```
 
@@ -202,7 +202,7 @@ Mô tả: Form tạo ghi chú (ca/ngày/nội dung ≥ 20 ký tự/việc tồn)
 Hạn: ____
 Nhánh: feature/supervisor-handover-note
 Reviewer: Đăng
-OBS: SV2-04-supervisor-handover-note.mp4
+OBS: SV2-03-supervisor-handover-note.mp4
 Trạng thái: CẦN LÀM
 ```
 

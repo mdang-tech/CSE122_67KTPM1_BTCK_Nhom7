@@ -13,12 +13,12 @@ Nội dung tối thiểu 12 ý mỗi video (xem file hướng dẫn, Phần 8).
 | 3 | SV1-03-profile.mp4 | profile.html | Đăng | Đổi validation tên tối thiểu 3 ký tự | ____ | ☐ |
 | 4 | SV1-04-404.mp4 | 404.html | Đăng | Đổi icon/emoji trang 404 | ____ | ☐ |
 | 5 | SV1-05-operator-line-status.mp4 | operator-line-status.html | Đăng | Thêm filter theo trạng thái máy | ____ | ☐ |
-| 6 | SV1-06-operator-incident-create.mp4 | operator-incident-create.html | Đăng | Thêm 1 từ khóa vào AI_KEYWORDS | ____ | ☐ |
-| 7 | SV1-07-operator-shift-incidents.mp4 | operator-shift-incidents.html | Đăng | Thêm cột "Thời gian" vào bảng | ____ | ☐ |
-| 8 | SV2-01-notifications.mp4 | notifications.html | Trung | Thêm nút xóa từng thông báo | ____ | ☐ |
-| 9 | SV2-02-supervisor-shift-dashboard.mp4 | supervisor-shift-dashboard.html | Trung | Thêm 1 stat card mới | ____ | ☐ |
-| 10 | SV2-03-supervisor-incident-board.mp4 | supervisor-incident-board.html | Trung | Thêm filter theo người xử lý | ____ | ☐ |
-| 11 | SV2-04-supervisor-handover-note.mp4 | supervisor-handover-note.html | Trung | Thêm field "Sản lượng ca" + validation | ____ | ☐ |
+| 6 | SV1-06-operator-shift-incidents.mp4 | operator-shift-incidents.html | Đăng | Thêm cột "Thời gian" vào bảng | ____ | ☐ |
+| 7 | SV1-07-notifications.mp4 | notifications.html | Đăng | Thêm nút xóa từng thông báo | ____ | ☐ |
+| 8 | SV2-01-supervisor-shift-dashboard.mp4 | supervisor-shift-dashboard.html | Trung | Thêm 1 stat card mới | ____ | ☐ |
+| 9 | SV2-02-supervisor-incident-board.mp4 | supervisor-incident-board.html | Trung | Thêm filter theo người xử lý | ____ | ☐ |
+| 10 | SV2-03-supervisor-handover-note.mp4 | supervisor-handover-note.html | Trung | Thêm field "Sản lượng ca" + validation | ____ | ☐ |
+| 11 | SV2-04-operator-incident-create.mp4 | operator-incident-create.html | Trung | Thêm 1 từ khóa vào AI_KEYWORDS | ____ | ☐ |
 | 12 | SV3-01-maintenance-queue.mp4 | maintenance-queue.html | Công | Đổi sắp xếp theo thời gian thay vì ưu tiên | ____ | ☐ |
 | 13 | SV3-02-maintenance-incident-detail.mp4 | maintenance-incident-detail.html | Công | Bắt buộc nhập downtime > 0 khi hoàn thành | ____ | ☐ |
 | 14 | SV3-03-maintenance-machine-history.mp4 | maintenance-machine-history.html | Công | Thêm loại công việc mới vào select | ____ | ☐ |
