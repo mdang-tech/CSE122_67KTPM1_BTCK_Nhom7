@@ -1,8 +1,4 @@
-/* 
-   LineWatch - main.js
-   Ham dung chung: dang nhap, nav, toast, modal,
-   dinh dang ngay, escapeHtml...
-    */
+// main.js: cac ham dung chung (dang nhap, nav, toast, modal, dinh dang ngay, escapeHtml...)
 
 /* Goi khi trang bat dau: seed du lieu + ve nav + ve user */
 function initPage() {

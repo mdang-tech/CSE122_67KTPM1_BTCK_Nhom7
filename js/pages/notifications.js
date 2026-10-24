@@ -6,6 +6,7 @@ initPage();
 
 var user = getCurrentUser();
 
+// lay danh sach thong bao cua user hien tai
 function myNotifications() {
   var all = DB.all("notifications");
   var mine = [];
