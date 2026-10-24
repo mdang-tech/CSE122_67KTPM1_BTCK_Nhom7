@@ -7,8 +7,8 @@ initPage();
 
 var user = getCurrentUser();
 
-/* ---------- Render bang su co ---------- */
 
+// ham loc: tu khoa + trang thai + uu tien
 function getFilteredIncidents() {
   var keyword = document.getElementById("search-box").value.toLowerCase().trim();
   var status = document.getElementById("filter-status").value;
@@ -73,7 +73,6 @@ function renderTable() {
   box.innerHTML = html;
 }
 
-/* ---------- Xem chi tiet ---------- */
 
 function showDetail(id) {
   var inc = DB.find("incidents", id);
@@ -93,7 +92,6 @@ function showDetail(id) {
   openModal("modal-detail");
 }
 
-/* ---------- Sua su co (chi khi con o trang thai Moi) ---------- */
 
 function fillEditSelects() {
   var cat = document.getElementById("edit-category");
@@ -143,7 +141,6 @@ document.getElementById("edit-form").addEventListener("submit", function (event)
   showToast("Đã lưu thay đổi sự cố.", "success");
 });
 
-/* ---------- Huy su co (bao cao sai) ---------- */
 
 function cancelIncident(id) {
   if (!confirm("Hủy báo cáo sự cố này? Chỉ dùng khi bạn báo nhầm.")) { return; }
@@ -152,7 +149,6 @@ function cancelIncident(id) {
   showToast("Đã hủy sự cố.", "info");
 }
 
-/* ---------- Gan su kien ---------- */
 
 document.getElementById("search-box").addEventListener("input", renderTable);
 document.getElementById("filter-status").addEventListener("change", renderTable);

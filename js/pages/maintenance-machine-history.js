@@ -8,7 +8,6 @@ initPage();
 var user = getCurrentUser();
 var aiAnswer = null;
 
-/* ---------- Chon may ---------- */
 
 function fillMachineSelect() {
   var select = document.getElementById("machine-select");
@@ -33,7 +32,6 @@ function selectedMachineId() {
   return document.getElementById("machine-select").value;
 }
 
-/* ---------- Render timeline ---------- */
 
 function renderHistory() {
   var box = document.getElementById("history-area");
@@ -95,7 +93,6 @@ function renderHistory() {
   box.innerHTML = html;
 }
 
-/* ---------- CRUD nhat ky bao tri ---------- */
 
 var taskCard = document.getElementById("task-form-card");
 
@@ -185,7 +182,6 @@ function deleteTask(id) {
   showToast("Đã xóa nhật ký.", "info");
 }
 
-/* ---------- AI-3: phat hien loi lap lai ---------- */
 
 document.getElementById("btn-ai-insight").addEventListener("click", function () {
   var machineId = selectedMachineId();
@@ -250,7 +246,6 @@ function aiReject() {
     '<div class="ai-result text-muted">Đã bỏ qua đề xuất AI. Bạn tự quyết định kế hoạch bảo trì thủ công.</div>';
 }
 
-/* ---------- Khoi chay ---------- */
 
 fillMachineSelect();
 document.getElementById("machine-select").addEventListener("change", function () {

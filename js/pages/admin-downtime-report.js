@@ -46,7 +46,6 @@ function buildReport() {
   renderDetailTable(incidents);
 }
 
-/* ---------- Thong ke tong ---------- */
 
 function renderStats(incidents) {
   var totalDown = 0;
@@ -64,7 +63,6 @@ function renderStats(incidents) {
     '</div><div class="stat-label">Downtime TB / sự cố (phút)</div></div>';
 }
 
-/* ---------- Bieu do cot theo day chuyen ---------- */
 
 function renderChart(incidents) {
   var box = document.getElementById("chart-area");
@@ -103,7 +101,6 @@ function renderChart(incidents) {
   box.innerHTML = html;
 }
 
-/* ---------- Top may downtime nhieu ---------- */
 
 function renderTopMachines(incidents) {
   var box = document.getElementById("top-machines");
@@ -136,7 +133,6 @@ function renderTopMachines(incidents) {
   box.innerHTML = html;
 }
 
-/* ---------- Bang chi tiet ---------- */
 
 function renderDetailTable(incidents) {
   var box = document.getElementById("detail-table");
@@ -165,7 +161,6 @@ function renderDetailTable(incidents) {
   box.innerHTML = html;
 }
 
-/* ---------- Xuat CSV ---------- */
 
 document.getElementById("btn-export").addEventListener("click", function () {
   if (lastReport.length === 0) {
@@ -195,7 +190,6 @@ document.getElementById("btn-export").addEventListener("click", function () {
   showToast("Đã tải file CSV báo cáo.", "success");
 });
 
-/* ---------- Khoi chay ---------- */
 
 document.getElementById("btn-report").addEventListener("click", buildReport);
 

@@ -11,7 +11,6 @@ function isOpen(status) {
   return status !== "Đã xử lý" && status !== "Đã hủy";
 }
 
-/* ---------- Thong ke ---------- */
 
 function renderStats() {
   var incidents = DB.all("incidents");
@@ -36,7 +35,6 @@ function renderStats() {
     '<div class="stat"><div class="stat-value">' + downtime + '</div><div class="stat-label">Phút downtime</div></div>';
 }
 
-/* ---------- Danh sach su co dang mo ---------- */
 
 function renderOpenIncidents() {
   var box = document.getElementById("open-incidents");
@@ -70,7 +68,6 @@ function renderOpenIncidents() {
   box.innerHTML = html;
 }
 
-/* ---------- May co van de ---------- */
 
 function renderProblemMachines() {
   var box = document.getElementById("problem-machines");
@@ -94,7 +91,6 @@ function renderProblemMachines() {
   box.innerHTML = html;
 }
 
-/* ---------- AI-2: tom tat ca ---------- */
 
 document.getElementById("btn-ai-summary").addEventListener("click", function () {
   aiShowLoading("ai-output");
@@ -163,7 +159,6 @@ function aiReject() {
     '<div class="ai-result text-muted">Đã từ chối tóm tắt của AI. Bạn có thể tự viết ghi chú bàn giao thủ công.</div>';
 }
 
-/* ---------- Khoi chay ---------- */
 
 fakeLoading("stats-box", function () {
   renderStats();

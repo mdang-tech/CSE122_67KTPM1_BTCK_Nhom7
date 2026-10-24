@@ -1,8 +1,4 @@
-/* 
-   LineWatch - data.js
-   Du lieu gia lap (mock data) + ham luu/doc LocalStorage
-   Moi trang deu phai nap file nay TRUOC main.js
-   */
+// data.js: du lieu gia lap (mock data) + ham luu/doc LocalStorage, nap truoc main.js
 
 
 var SEED_USERS = [

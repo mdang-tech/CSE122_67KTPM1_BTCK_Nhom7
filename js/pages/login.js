@@ -4,6 +4,7 @@ initPage();
 
 var form = document.getElementById("login-form");
 
+// bam Gui thi JS tu kiem tra, khong cho reload trang
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 

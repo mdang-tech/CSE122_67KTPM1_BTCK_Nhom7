@@ -5,7 +5,6 @@ if (!requireRole(["admin"])) { /* sai vai tro */ }
 
 initPage();
 
-/* ---------- Render danh sach ---------- */
 
 function renderLines() {
   var box = document.getElementById("line-cards");
@@ -46,7 +45,6 @@ function renderLines() {
   box.innerHTML = html;
 }
 
-/* ---------- Modal them / sua ---------- */
 
 function hideErrors() {
   document.getElementById("err-name").classList.remove("show");
@@ -122,7 +120,6 @@ document.getElementById("line-form").addEventListener("submit", function (event)
   renderLines();
 });
 
-/* ---------- Luu tru / khoi phuc ---------- */
 
 function toggleArchive(id, archived) {
   var msg = archived
@@ -134,6 +131,5 @@ function toggleArchive(id, archived) {
   showToast(archived ? "Đã lưu trữ dây chuyền." : "Đã khôi phục dây chuyền.", "info");
 }
 
-/* ---------- Khoi chay ---------- */
 
 fakeLoading("line-cards", renderLines);

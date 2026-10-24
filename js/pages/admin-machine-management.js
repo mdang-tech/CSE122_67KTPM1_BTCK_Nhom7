@@ -5,7 +5,6 @@ if (!requireRole(["admin"])) { /* sai vai tro */ }
 
 initPage();
 
-/* ---------- Loc + render bang ---------- */
 
 function fillFilters() {
   var select = document.getElementById("filter-line");
@@ -69,7 +68,6 @@ function renderTable() {
   box.innerHTML = html;
 }
 
-/* ---------- Modal them / sua ---------- */
 
 function fillLineSelect() {
   var select = document.getElementById("machine-line");
@@ -167,7 +165,6 @@ document.getElementById("machine-form").addEventListener("submit", function (eve
   renderTable();
 });
 
-/* ---------- Luu tru / khoi phuc ---------- */
 
 function toggleArchive(id, archived) {
   var msg = archived ? "Lưu trữ máy này? Máy sẽ ẩn khỏi các trang vận hành." : "Khôi phục máy này?";
@@ -177,7 +174,6 @@ function toggleArchive(id, archived) {
   showToast(archived ? "Đã lưu trữ máy." : "Đã khôi phục máy.", "info");
 }
 
-/* ---------- Khoi chay ---------- */
 
 fillFilters();
 document.getElementById("search-box").addEventListener("input", renderTable);
