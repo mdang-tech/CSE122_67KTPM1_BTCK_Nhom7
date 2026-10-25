@@ -4,6 +4,13 @@ initPage();
 
 var form = document.getElementById("login-form");
 
+/* nho vai tro dang nhap gan nhat, lan sau mo trang thi tu tick san */
+var lastRole = localStorage.getItem("lw_last_role");
+if (lastRole !== null) {
+  var lastRadio = document.querySelector('input[name="username"][value="' + lastRole + '"]');
+  if (lastRadio !== null) { lastRadio.checked = true; }
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -44,6 +51,7 @@ form.addEventListener("submit", function (event) {
 
   /* Dang nhap thanh cong */
   saveCurrentUser(found);
+  localStorage.setItem("lw_last_role", found.username);
   var btn = document.getElementById("btn-login");
   btn.disabled = true;
   btn.textContent = "Đang đăng nhập...";
