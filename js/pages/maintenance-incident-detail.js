@@ -13,7 +13,6 @@ function getIdFromUrl() {
   return params.get("id");
 }
 
-/* ---------- Dien select danh sach su co ---------- */
 
 function fillIncidentSelect() {
   var select = document.getElementById("incident-select");
@@ -28,7 +27,6 @@ function fillIncidentSelect() {
   }
 }
 
-/* ---------- Render chi tiet ---------- */
 
 function renderDetail(id) {
   var box = document.getElementById("detail-area");
@@ -119,7 +117,6 @@ function renderDetail(id) {
   }
 }
 
-/* ---------- Luu cap nhat xu ly ---------- */
 
 function saveHandling(id) {
   var status = document.getElementById("input-status").value;
@@ -180,7 +177,6 @@ function takeJob(id) {
   showToast("Bạn đã nhận việc này.", "success");
 }
 
-/* ---------- Khoi chay ---------- */
 
 fillIncidentSelect();
 

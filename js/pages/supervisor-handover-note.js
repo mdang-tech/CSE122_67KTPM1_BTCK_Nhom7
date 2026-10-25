@@ -10,7 +10,6 @@ var user = getCurrentUser();
 /* Mac dinh ngay hom nay */
 document.getElementById("input-date").value = todayStr();
 
-/* ---------- Render danh sach ---------- */
 
 function renderNotes() {
   var box = document.getElementById("note-list");
@@ -47,7 +46,6 @@ function renderNotes() {
   box.innerHTML = html;
 }
 
-/* ---------- Tao moi ---------- */
 
 document.getElementById("note-form").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -90,7 +88,6 @@ document.getElementById("note-form").addEventListener("submit", function (event)
   showToast("Đã lưu ghi chú bàn giao!", "success");
 });
 
-/* ---------- Sua ---------- */
 
 function openEdit(id) {
   var n = DB.find("shiftNotes", id);
@@ -125,7 +122,6 @@ document.getElementById("edit-form").addEventListener("submit", function (event)
   showToast("Đã cập nhật ghi chú.", "success");
 });
 
-/* ---------- Xoa ---------- */
 
 function deleteNote(id) {
   if (!confirm("Xóa ghi chú bàn giao này? Hành động không thể hoàn tác.")) { return; }
@@ -134,6 +130,5 @@ function deleteNote(id) {
   showToast("Đã xóa ghi chú.", "info");
 }
 
-/* ---------- Khoi chay ---------- */
 
 fakeLoading("note-list", renderNotes);

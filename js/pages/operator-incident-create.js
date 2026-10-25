@@ -8,7 +8,6 @@ initPage();
 var user = getCurrentUser();
 var aiAnswer = null; /* ket qua AI lan gan nhat */
 
-/* ---------- Dien du lieu vao form ---------- */
 
 function fillFormOptions() {
   /* Danh sach may, nhom theo day chuyen */
@@ -53,7 +52,6 @@ function fillFormOptions() {
 
 fillFormOptions();
 
-/* ---------- AI-1: phan loai su co ---------- */
 
 document.getElementById("btn-ai").addEventListener("click", function () {
   var title = document.getElementById("input-title").value;
@@ -117,7 +115,6 @@ function aiReject() {
     '<div class="ai-result text-muted">Đã từ chối kết quả AI. Bạn hãy tự chọn loại sự cố thủ công.</div>';
 }
 
-/* ---------- Gui form + validation ---------- */
 
 document.getElementById("incident-form").addEventListener("submit", function (event) {
   event.preventDefault();

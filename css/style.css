@@ -465,7 +465,6 @@ a:hover {
   color: var(--muted);
 }
 
-/* --- Toast (thong bao noi) --- */
 #toast-box {
   position: fixed;
   bottom: 20px;

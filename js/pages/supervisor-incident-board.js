@@ -7,7 +7,6 @@ initPage();
 
 var BOARD_COLUMNS = ["Mới", "Đang chờ", "Đang xử lý", "Đã xử lý"];
 
-/* ---------- Loc + render bang ---------- */
 
 function fillLineFilter() {
   var select = document.getElementById("filter-line");
@@ -85,7 +84,6 @@ function moveStatus(id, newStatus) {
   showToast("Đã chuyển trạng thái sang: " + newStatus, "success");
 }
 
-/* ---------- Phan cong ---------- */
 
 function openAssign(id) {
   var inc = DB.find("incidents", id);
@@ -124,7 +122,6 @@ document.getElementById("assign-form").addEventListener("submit", function (even
   showToast("Đã phân công cho " + assignee + ".", "success");
 });
 
-/* ---------- Khoi chay ---------- */
 
 fillLineFilter();
 document.getElementById("filter-priority").addEventListener("change", renderBoard);

@@ -1,17 +1,5 @@
-/*
-   LineWatch - ai.js
-   Mo phong 3 tinh nang AI bang JavaScript theo luat
-   (khong goi API that). Moi ham nhan du lieu vao,
-   "suy nghi" 1 chut (setTimeout) roi tra ket qua
-   qua ham callback.
-
-   Ket qua luon co dang:
-   { ok: true,  result: ..., explain: "..." }
-   hoac khi AI that bai / khong chac chan:
-   { ok: false, message: "..." }
-   =================================================== */
-AI-1: Phan loai su co va muc uu tien 
-/* Dung trong trang operator-incident-create.html */
+// ai.js: mo phong 3 tinh nang AI bang luat trong JavaScript (khong goi API that)
+// AI-1: phan loai su co va muc uu tien (dung trong trang operator-incident-create.html)
 
 
 var AI_KEYWORDS = [
