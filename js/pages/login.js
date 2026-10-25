@@ -4,7 +4,6 @@ initPage();
 
 var form = document.getElementById("login-form");
 
-feature/common-login
 /* nho vai tro dang nhap gan nhat, lan sau mo trang thi tu tick san */
 var lastRole = localStorage.getItem("lw_last_role");
 if (lastRole !== null) {
@@ -13,7 +12,6 @@ if (lastRole !== null) {
 }
 
 // bam Gui thi JS tu kiem tra, khong cho reload trang
-main
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
