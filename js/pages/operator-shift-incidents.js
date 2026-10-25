@@ -35,6 +35,10 @@ function renderTable() {
   var box = document.getElementById("incident-table-box");
   var list = getFilteredIncidents();
 
+  /* Bao cho nguoi dung biet dang loc duoc bao nhieu su co */
+  document.getElementById("result-count").textContent =
+    "Đang hiện " + list.length + " kết quả.";
+
   /* Trang thai rong */
   if (list.length === 0) {
     box.innerHTML =
@@ -157,5 +161,13 @@ function cancelIncident(id) {
 document.getElementById("search-box").addEventListener("input", renderTable);
 document.getElementById("filter-status").addEventListener("change", renderTable);
 document.getElementById("filter-priority").addEventListener("change", renderTable);
+
+/* Nut xoa bo loc: tra 3 o ve mac dinh roi ve lai bang */
+document.getElementById("btn-reset").addEventListener("click", function () {
+  document.getElementById("search-box").value = "";
+  document.getElementById("filter-status").value = "all";
+  document.getElementById("filter-priority").value = "all";
+  renderTable();
+});
 
 fakeLoading("incident-table-box", renderTable);
