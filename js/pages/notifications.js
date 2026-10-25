@@ -42,7 +42,8 @@ function renderNotifications() {
       "<div>" + escapeHtml(n.message) + "</div>" +
       '<div class="text-muted" style="font-size:12px;">' + formatDateTime(n.time) +
       (n.read ? " · Đã đọc" : " · <strong>Mới</strong>") + "</div>" +
-      (n.read ? "" : '<button class="btn btn-outline btn-sm mt-8" onclick="markRead(' + n.id + ')">Đánh dấu đã đọc</button>') +
+      (n.read ? "" : '<button class="btn btn-outline btn-sm mt-8" onclick="markRead(' + n.id + ')">Đánh dấu đã đọc</button> ') +
+      '<button class="btn btn-danger btn-sm mt-8" onclick="deleteOne(' + n.id + ')">Xóa</button>' +
       "</div>";
   }
   box.innerHTML = html;
@@ -51,6 +52,13 @@ function renderNotifications() {
 function markRead(id) {
   DB.update("notifications", id, { read: true });
   renderNotifications();
+}
+
+/* Xoa 1 thong bao khoi danh sach */
+function deleteOne(id) {
+  DB.remove("notifications", id);
+  renderNotifications();
+  showToast("Đã xóa thông báo.", "info");
 }
 
 document.getElementById("btn-read-all").addEventListener("click", function () {
