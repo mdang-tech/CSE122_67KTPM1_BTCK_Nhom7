@@ -1,7 +1,7 @@
-Dán link Figma/Canva của nhóm vào đây (thay dòng này):
-
-Link Figma: (đang chờ nhóm tạo - dùng template wireframe trong Canva/Figma, đủ 17 màn hình theo docs/screen-inventory.md)
-Link Canva (phương án dự phòng):
+Link thiết kế Canva (bản chia sẻ - dùng để nộp): https://www.canva.com/design/DAHZFFZbkWs/Vjv319IRiooBsiOnfn1yrQ/view
+Link rút gọn (share): https://canva.link/j86qc7zkut39eay
+Link Canva website (prototype chạy được - điểm cộng): https://btl-group7.my.canva.site/trang-web-dashboard-linewatch
+Link Figma: (nhóm dùng Canva, không dùng Figma)
 
 Yêu cầu trong file thiết kế (theo hướng dẫn CSE122 Phần 5):
 1. Sơ đồ trang (sitemap)
