@@ -1,30 +1,34 @@
 # Minh chứng OBS – Bảng theo dõi video
 
-Quy tắc: **mỗi màn hình = 1 video OBS có mặt + giọng nói sinh viên**.
-Nội dung tối thiểu 12 ý mỗi video (xem file hướng dẫn, Phần 8).
-Đặt tên file: `SV?-??-ten-man-hinh.mp4`, up lên Drive/YouTube rồi dán link vào bảng.
+> **Thực tế nộp bài:** ĐK4 yêu cầu **3 video OBS** có mặt + giọng nói sinh viên. Nhóm nộp **3 video series "xây dựng từ 0%"** do SV1 (Đăng) quay, mỗi video đi xuyên nhiều màn hình (không phải 1 video / 1 màn hình).
+> **Quy tắc đặt tên đã điều chỉnh:** giữ tiền tố `SV1-` (chỉ người quay) + số thứ tự video + nội dung chính, đuôi `.mkv` (định dạng gốc của OBS). Không dùng mẫu cũ `SV?-??-ten-man-hinh.mp4` vì mẫu đó sinh ra cho kế hoạch 17 video (mỗi video 1 màn hình), không khớp với video series nhiều màn hình.
+> Up lên Drive/YouTube (chế độ "bất kỳ ai có link") rồi dán link vào cột **Link Drive**.
 
-## Checklist 17 video
+## 3 video chính (đủ ĐK4)
 
-| # | Video | Màn hình | Người quay | Nội dung sửa trực tiếp gợi ý | Link Drive | Trạng thái |
+| # | File video | Nội dung chính | Màn hình chứng minh (mã SV) | Người quay | Link Drive | Trạng thái |
 |---:|---|---|---|---|---|---|
-| 1 | SV1-01-index.mp4 | index.html | Đăng | Đổi text nút hero | ____ | ☐ |
-| 2 | SV1-02-login.mp4 | login.html | Đăng | Thêm thông báo lỗi khi sai mật khẩu | ____ | ☐ |
-| 3 | SV1-03-profile.mp4 | profile.html | Đăng | Đổi validation tên tối thiểu 3 ký tự | ____ | ☐ |
-| 4 | SV1-04-404.mp4 | 404.html | Đăng | Đổi icon/emoji trang 404 | ____ | ☐ |
-| 5 | SV1-05-operator-line-status.mp4 | operator-line-status.html | Đăng | Thêm filter theo trạng thái máy | ____ | ☐ |
-| 6 | SV1-06-operator-shift-incidents.mp4 | operator-shift-incidents.html | Đăng | Thêm cột "Thời gian" vào bảng | ____ | ☐ |
-| 7 | SV1-07-notifications.mp4 | notifications.html | Đăng | Thêm nút xóa từng thông báo | ____ | ☐ |
-| 8 | SV2-01-supervisor-shift-dashboard.mp4 | supervisor-shift-dashboard.html | Trung | Thêm 1 stat card mới | ____ | ☐ |
-| 9 | SV2-02-supervisor-incident-board.mp4 | supervisor-incident-board.html | Trung | Thêm filter theo người xử lý | ____ | ☐ |
-| 10 | SV2-03-supervisor-handover-note.mp4 | supervisor-handover-note.html | Trung | Thêm field "Sản lượng ca" + validation | ____ | ☐ |
-| 11 | SV2-04-operator-incident-create.mp4 | operator-incident-create.html | Trung | Thêm 1 từ khóa vào AI_KEYWORDS | ____ | ☐ |
-| 12 | SV3-01-maintenance-queue.mp4 | maintenance-queue.html | Công | Đổi sắp xếp theo thời gian thay vì ưu tiên | ____ | ☐ |
-| 13 | SV3-02-maintenance-incident-detail.mp4 | maintenance-incident-detail.html | Công | Bắt buộc nhập downtime > 0 khi hoàn thành | ____ | ☐ |
-| 14 | SV3-03-maintenance-machine-history.mp4 | maintenance-machine-history.html | Công | Thêm loại công việc mới vào select | ____ | ☐ |
-| 15 | SV3-04-admin-machine-management.mp4 | admin-machine-management.html | Công | Thêm cột "Số sự cố" vào bảng máy | ____ | ☐ |
-| 16 | SV3-05-admin-line-management.mp4 | admin-line-management.html | Công | Đổi grid card thành bảng table | ____ | ☐ |
-| 17 | SV3-06-admin-downtime-report.mp4 | admin-downtime-report.html | Công | Xử lý khi API/data trả về rỗng | ____ | ☐ |
+| 1 | `SV1-Video-1-Khung-CSS-DuLieu.mkv` | Khung dự án, trang chủ, tầng CSS nền tảng, tầng dữ liệu LocalStorage | SV1-01 (index) | Đăng | ____ | ☑ đã quay |
+| 2 | `SV1-Video-2-Login-Line-Status.mkv` | Đăng nhập phân quyền + validate, bảng trạng thái dây chuyền 2 bộ lọc | SV1-02 (login), SV1-05 (line-status) | Đăng | ____ | ☑ đã quay |
+| 3 | `SV1-Video-3-SuCo-ThongBao-404.mkv` | Lát cắt dọc bảng sự cố (search/lọc/modal sửa/validate), thông báo, 404, responsive, commit git | SV1-06 (shift-incidents), SV1-07 (notifications), SV1-04 (404) | Đăng | ____ | ☑ đã quay |
+
+## Ánh xạ màn hình ↔ video
+
+| Mã màn hình | Màn hình | Nằm trong video |
+|---|---|---|
+| SV1-01 | index.html | Video 1 |
+| SV1-02 | login.html | Video 2 |
+| SV1-04 | 404.html | Video 3 |
+| SV1-05 | operator-line-status.html | Video 2 |
+| SV1-06 | operator-shift-incidents.html | Video 3 |
+| SV1-07 | notifications.html | Video 3 |
+| SV1-03 | profile.html | **chưa có video riêng** (xem ghi chú dưới) |
+
+## Ghi chú
+
+- Màn **SV1-03 (profile.html)** chưa xuất hiện trong video nào. Nếu cần minh chứng riêng, quay thêm 1 clip ngắn 2–3 phút; nếu không, chấp nhận vì ĐK4 chỉ yêu cầu 3 video và profile vẫn có trong code + bundle đi thi.
+- Các màn của SV2 (Trưởng ca) và SV3 (Bảo trì / Quản trị) không nằm trong 3 video series này; nếu thầy yêu cầu minh chứng riêng từng thành viên, Trung và Công cần quay thêm clip ngắn cho màn của mình.
+- Kế hoạch gốc 17 video (mỗi màn 1 video, tên `SV?-??-ten-man-hinh.mp4`) được giữ trong lịch sử tài liệu; bảng trên là thực tế đã quay và nộp.
 
 ## Mẫu liên kết video ↔ commit (Phụ lục D – copy cho mỗi video)
 
@@ -34,14 +38,14 @@ Người làm :
 Trello    : TASK-??
 Nhánh     : feature/...
 Commit    : ???????
-Video     : SV?-??-....mp4
+Video     : SV1-Video-?.mkv
 ```
 
 ## Gợi ý OBS
 
 1. Tải OBS Studio (miễn phí) → Settings → chọn quay màn hình + webcam + mic.
-2. Trước khi quay: mở sẵn Figma mockup, file mã trong VS Code, trình duyệt.
+2. Trước khi quay: mở sẵn mockup, file mã trong VS Code, trình duyệt.
 3. Quay theo trình tự: mặt SV → mockup → giải thích HTML/CSS/JS → sửa trực tiếp 1 chỗ
-   → chạy thử trên trình duyệt → `git add . && git commit && git push` → đọc to
+   → chạy thử trên trình duyệt → `git add` + `git commit` + `git push` → đọc to
    TASK / nhánh / mã commit.
-4. Mỗi video 5–10 phút là đủ. Up Drive chế độ "bất kỳ ai có link".
+4. Up Drive chế độ "bất kỳ ai có link".
