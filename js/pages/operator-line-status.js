@@ -93,6 +93,10 @@ function renderLines() {
       "</div>";
   }
 
+  /* Hien so day chuyen dang hien thi sau khi loc */
+  document.getElementById("line-count").textContent =
+    "Đang hiện " + shown + " dây chuyền.";
+
   box.innerHTML = html;
 }
 
