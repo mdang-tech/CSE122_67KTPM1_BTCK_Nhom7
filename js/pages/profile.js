@@ -30,6 +30,12 @@ document.getElementById("profile-form").addEventListener("submit", function (eve
     return;
   }
 
+  /* Ten khong doi thi khong ghi xuong du lieu */
+  if (newName === user.name) {
+    showToast("Tên không thay đổi.", "info");
+    return;
+  }
+
   DB.update("users", user.id, { name: newName });
   user.name = newName;
   saveCurrentUser(user);
